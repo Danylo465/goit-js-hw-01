@@ -1,11 +1,11 @@
 function getShippingMessage(country, price, deliveryFee){
+    const totalPriceF = deliveryFee + price;
     return `Shipping to ${country} will cost ${totalPriceF} credits`;
 }
-const consumerCountry = "Ukraine";
+const country = "Ukraine";
 const price = 16000;
-const deliveryPay = 60;
-const totalPriceF = deliveryPay + price;
-const totalPriceMessage = getShippingMessage(consumerCountry, price, deliveryPay);
+const deliveryFee = 60;      
+const totalPriceMessage = getShippingMessage(country, price, deliveryFee);
 console.log(totalPriceMessage);
 
 // ---------------------------------------------------------------------------
